@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Tính Hoa Hồng</title>
+</head>
+<body>
+<!--Hoa hồng tính theo như sau:-->
+<!--Ví dụ:   Doanh thu - Chi phí > 50tr : Hoa Hồng 2%-->
+<!--        Doanh thu - Chi Phí > 150tr : Hoa hồng 5%-->
+<!--        Doanh thu - Chi Phí > 300tr : Hoa hồng 9%-->
+</body>
+<script>
+    var doanhthu = prompt("Nhập tổng doanh thu");
+    var chiphi = prompt("Nhập tổng chi phí");
+    if (isNaN(doanhthu) || doanhthu === ""){
+        alert("Hãy nhập tổng doanh thu quý này");
+    } else
+    if (isNaN(chiphi) || chiphi === ""){
+        alert("Hãy nhập tổng chi phí sản xuất");
+    } else {
+        doanhthu = parseInt(doanhthu);
+        chiphi = parseInt(chiphi);
+        var lai = doanhthu - chiphi;
+        if (lai < 50000000){
+            alert("Tháng này không có hoa hồng");
+        } else
+        if (lai > 5000000){
+            var hoahong = lai * 0.02;
+            alert("Hoa hồng tháng này là: " + hoahong + " với số tiền lãi là " + lai);
+        } else if (lai > 150000000){
+            var hoahong = lai * 0.05;
+            alert("Hoa hồng tháng này là: " + hoahong + " với số tiền lãi là " + lai);
+        } else if (lai > 300000000){
+            var hoahong = lai * 0.09;
+            alert("Hoa hồng tháng này là: " + hoahong + " với số tiền lãi là " + lai);
+        }
+    }
+    init_reload();
+    function init_reload() {
+        setInterval(function () {
+            window.location.reload();
+        }, 1000);
+    }
+</script>
+</html>

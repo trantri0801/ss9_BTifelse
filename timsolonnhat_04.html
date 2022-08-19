@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Tìm số lớn nhất</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = prompt("Nhập vào số a");
+    var b = prompt("Nhập vào số b");
+    var c = prompt("Nhập vào số c");
+    if (isNaN(a) || a === ""){
+        alert("Chưa nhập số a");
+    }
+    if (isNaN(b) || b === ""){
+        alert("Chưa nhập số b");
+    }
+    if (isNaN(c) || c === ""){
+        alert("Chưa nhập số c");
+    }
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+    if ( a > b && a > c ){
+        alert(a + " là số lớn nhât");
+    } else if ( b > c ){
+        alert(b + " là số lớn nhất");
+    } else {
+        alert(c + " là số lớn nhất");
+    }
+    init_reload();
+    function init_reload(){
+        setInterval( function() {
+            window.location.reload();
+        },1000);
+    }
+</script>
+</html>

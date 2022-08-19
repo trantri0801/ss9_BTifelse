@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT_Tuoivaolop10</title>
+</head>
+<body>
+
+</body>
+<script>
+    var age = prompt("Nhập vào tuổi của học sinh");
+    if (isNaN(age) || age === ""){
+        alert("Nhập sai, nhập lại");
+    }
+    else if (parseInt(age) <= 0){
+        alert("Hãy nhập độ tuổi đúng");
+    } else{
+        if (parseInt(age) < 15){
+            alert("Không đủ điều kiện vào lớp 10");
+        } else {
+            alert("Đủ điều kiện vào lớp 10");
+        }
+    }
+    init_reload();
+    function init_reload(){
+        setInterval( function() {
+            window.location.reload();
+        },1000);
+    }
+</script>
+</html>

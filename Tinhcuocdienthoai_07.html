@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT tính cước điện thoại</title>
+</head>
+<body>
+<!--Tính cước điện thoại của 1 gia đình biết số phút gọi * 1650 đồng-->
+</body>
+<script>
+    var a = prompt("Nhập số phút gọi của bố");
+    var b = prompt("Tính số phút gọi của mẹ");
+    if (isNaN(a) || a === ""){
+        alert("Nhập lại số phút của bố");
+    } else
+    if (isNaN(b) || b === ""){
+        alert("Nhập lại số phút của mẹ");
+    } else {
+        a = parseInt(a);
+        b = parseInt(b);
+        var tong = (a + b)*1650;
+        alert("Tổng số tiền cước tháng này là: " + tong);
+    }
+    init_reload();
+    function init_reload() {
+        setInterval(function () {
+            window.location.reload();
+        }, 1000);
+    }
+</script>
+</html>

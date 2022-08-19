@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT_Songuyen</title>
+</head>
+<body>
+
+</body>
+<script>
+    var so = prompt("Nhập vào số nguyên");
+    if (isNaN(so) || so === ""){
+        alert("Nhập sai, hãy nhập lại");
+    }
+    if (parseInt(so) < 0){
+        alert("Số " + so + " bé hơn 0");
+    } else {
+        if (parseInt(so) > 0 ){
+            alert("Số " + so + " lớn hơn 0")
+        } else {
+            if (parseInt(so) == 0){
+                alert("Đồ khùng")
+            }
+        }
+    }
+    init_reload();
+    function init_reload(){
+        setInterval( function() {
+            window.location.reload();
+        },1000);
+    }
+</script>
+</html>
